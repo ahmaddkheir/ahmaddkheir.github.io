@@ -12,15 +12,15 @@
 
   <style>
     :root{
-      --bg-grad-start:#667eea;
-      --bg-grad-end:#764ba2;
-      --brand:#764ba2;
-      --brand-2:#667eea;
-      --ink:#1f2937;
-      --muted:#6b7280;
-      --surface:#ffffff;
-      --cta-start:#ff6b6b;
-      --cta-end:#ee5a52;
+      --bg-grad-start:#1C1C1C;   /* deep charcoal */
+      --bg-grad-end:#2B2B2B;     /* slightly lighter black */
+      --brand:#E5BFA3;           /* warm beige accent */
+      --brand-2:#D49D7B;         /* darker beige accent */
+      --ink:#1f1f1f;             /* main text */
+      --muted:#6b6b6b;           /* muted text */
+      --surface:#ffffff;         /* cards/backgrounds */
+      --cta-start:#E5BFA3;       /* beige */
+      --cta-end:#D49D7B;         /* darker beige */
       --radius-lg:16px;
       --shadow-sm:0 2px 12px rgba(0,0,0,.08);
       --shadow-md:0 10px 30px rgba(0,0,0,.12);
@@ -85,12 +85,11 @@
     .hero-content{position:relative; z-index:1}
     .avatar{
       width:220px; height:220px; border-radius:50%;
-      margin:0 auto 24px; border:5px solid rgba(255,255,255,.28);
+      margin:0 auto 24px; border:5px solid var(--brand);
       overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,.2);
     }
     .avatar img{
       width:100%; height:100%; object-fit:cover;
-      /* “Zoom” without transform on parent */
       object-position:center 10%;
       transform:scale(1.18);
     }
@@ -104,9 +103,11 @@
       max-width:680px; margin:0 auto 2rem; opacity:.95;
     }
     .cta-button{
-      display:inline-block; background:linear-gradient(45deg, var(--cta-start), var(--cta-end));
-      color:#fff; padding:14px 34px; border-radius:999px; font-weight:700; text-decoration:none;
-      box-shadow:0 8px 24px rgba(238,90,82,.45); transition:.25s ease;
+      display:inline-block;
+      background:linear-gradient(45deg, var(--cta-start), var(--cta-end));
+      color:#111;
+      padding:14px 34px; border-radius:999px; font-weight:700; text-decoration:none;
+      box-shadow:0 8px 24px rgba(229,191,163,.45); transition:.25s ease;
     }
     .cta-button:hover,.cta-button:focus{transform:translateY(-2px)}
     .cta-button:focus-visible{outline:3px solid #fff; outline-offset:4px}
@@ -146,22 +147,22 @@
     .project-links{display:flex; gap:.6rem; flex-wrap:wrap}
     .project-link{
       display:inline-block; padding:9px 16px; border-radius:999px; text-decoration:none; font-size:.92rem;
-      background:linear-gradient(45deg, var(--brand-2), var(--brand)); color:#fff;
+      background:linear-gradient(45deg, var(--brand-2), var(--brand)); color:#111; font-weight:600;
     }
-    .project-link:focus-visible{outline:3px solid rgba(102,126,234,.5); outline-offset:3px}
+    .project-link:focus-visible{outline:3px solid rgba(229,191,163,.5); outline-offset:3px}
 
     /* Contact */
     .contact{
       padding:80px 0; color:#fff; text-align:center;
-      background:linear-gradient(135deg, var(--brand) 0%, var(--brand-2) 100%);
+      background:linear-gradient(135deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%);
     }
     .contact p{font-size:1.1rem; opacity:.95; max-width:700px; margin:0 auto 1.6rem}
     .contact-cta{
-      display:inline-block; background:#fff; color:var(--brand);
+      display:inline-block; background:var(--brand); color:#111;
       padding:14px 34px; border-radius:999px; font-weight:700; text-decoration:none; transition:.25s ease;
       box-shadow:0 8px 24px rgba(0,0,0,.25);
     }
-    .contact-cta:hover,.contact-cta:focus{transform:translateY(-2px)}
+    .contact-cta:hover,.contact-cta:focus{background:var(--brand-2); color:#fff; transform:translateY(-2px)}
     .contact-cta:focus-visible{outline:3px solid #fff; outline-offset:4px}
 
     /* Responsive */
@@ -190,7 +191,7 @@
     <section id="home" class="hero" aria-labelledby="hero-title">
       <div class="container hero-content">
         <div class="avatar" aria-hidden="true">
-          <img src="images/myimage.jpg" alt="" loading="eager" />
+          <img src="images/myimage.jpg" alt="Portrait of Ahmad Kheir" loading="eager" />
         </div>
         <h1 id="hero-title">Ahmad Kheir</h1>
         <p class="lead">AI Engineer and Backend Developer focused on building reliable, scalable systems that turn data into decisions. I care about clean architecture, measurable impact, and shipping.</p>
@@ -201,11 +202,9 @@
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
-
         <div class="projects-grid">
-          <!-- Example project card; duplicate and edit -->
-          
-        </div><!-- /projects-grid -->
+          <!-- Add project cards here -->
+        </div>
       </div>
     </section>
   </main>
